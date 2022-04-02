@@ -1,0 +1,59 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: rgb(245,243,241);
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+/* Shared */
+@import './shared/header.scss';
+@import './domain/about.scss';
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  .author {
+      color: rgb(30,30,30);
+      font-size: 74px;
+      width: 45px;
+      p {
+        width: auto;
+        padding: 0;
+        margin: 0;
+      }
+      .middlename {
+        margin-left: 2rem;
+      }
+    
+  }
+
+
+}
+// 300 500
+.author-img {
+  margin-right: 2rem !important;
+  border-radius: 3rem !important;
+  opacity: 0.8;
+  background-image: url('../../public/assets/imgs/author.jpeg');
+  width: 300px;
+  height: 500px;
+  background-size: cover;
+  &:hover {
+    background-color: rgba(44, 36, 83, 0.2);
+    background-blend-mode: color;
+  }
+}
