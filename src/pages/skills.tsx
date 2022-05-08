@@ -1,11 +1,61 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { FaJs, FaReact } from 'react-icons/fa';
-import {SiHtml5, SiCss3, SiTypescript, SiNextdotjs, SiAngular, SiFlutter, SiCypress, SiJest, SiJasmine, SiGoogle } from 'react-icons/si';
+import { SiHtml5, SiCss3, SiTypescript, SiNextdotjs, SiAngular, SiFlutter, SiCypress, SiJest, SiJasmine, SiGoogle } from 'react-icons/si';
+import { SkillsListModel } from '../infrastructure/interfaces/modules/skills';
 
 const Skills: NextPage = () => {
 
-
+  const skillsList: SkillsListModel[] = [
+    {
+      title: "HTML",
+      icon: <SiHtml5 />
+    },
+    {
+      title: "CSS",
+      icon: <SiCss3 />
+    },
+    {
+      title: "Javascript",
+      icon: <FaJs />
+    },
+    {
+      title: "Typescript",
+      icon: <SiTypescript />
+    },
+    {
+      title: "React JS",
+      icon: <FaReact />
+    },
+    {
+      title: "Next JS",
+      icon: <SiNextdotjs />
+    },
+    {
+      title: "Angular",
+      icon: <SiAngular />
+    },
+    {
+      title: "Flutter",
+      icon: <SiFlutter />
+    },
+    {
+      title: "Cypress",
+      icon: <SiCypress />
+    },
+    {
+      title: "Jest",
+      icon: <SiJest />
+    },
+    {
+      title: "Jasmine",
+      icon: <SiJasmine />
+    },
+    {
+      title: "Goolang",
+      icon: <SiGoogle />
+    }
+  ]
 
   return (
     <div>
@@ -18,84 +68,27 @@ const Skills: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='container__section'>
-        <section className='container__title'>
+       
+        <section className='container__title '>
           <h2 className='title'>
             Skills
           </h2>
         </section>
-        <ul className="content__list">
-        <li className="content__item">
-            <h3 className="title__content">
-              HTML
-              <SiHtml5 />
-            </h3>
-          </li>
-          <li className="content__item">
-            <h3 className="title__content">
-              CSS
-              <SiCss3 />
-            </h3>
-          </li>
-          <li className="content__item">
-            <h3 className="title__content">
-              Javascript
-              <FaJs />
-            </h3>
-          </li>
-          <li className="content__item">
-            <h3 className="title__content">
-              Typescript
-              <SiTypescript />
-            </h3>
-          </li>
-          <li className="content__item">
-            <h3 className="title__content">
-              React JS
-              <FaReact />
-            </h3>
-          </li>
-          <li className="content__item">
-            <h3 className="title__content">
-              Next JS
-              <SiNextdotjs />
-            </h3>
-          </li>
-          <li className="content__item">
-            <h3 className="title__content">
-              Angular
-              <SiAngular />
-            </h3>
-          </li>
-          <li className="content__item">
-            <h3 className="title__content">
-              Flutter
-              <SiFlutter />
-            </h3>
-          </li>
-          <li className="content__item">
-            <h3 className="title__content">
-              Cypress
-              <SiCypress />
-            </h3>
-          </li>
-          <li className="content__item">
-            <h3 className="title__content">
-              Jest
-              <SiJest />
-            </h3>
-          </li>
-          <li className="content__item">
-            <h3 className="title__content">
-              Jasmine
-              <SiJasmine />
-            </h3>
-          </li>
-          <li className="content__item">
-            <h3 className="title__content">
-              Goolang
-              <SiGoogle />
-            </h3>
-          </li>
+   
+        <ul className="content__list wrapper">
+     
+          {
+            skillsList.map((skill) => {
+              return (
+                <li className="content__item title" key={skill.title}>
+                  <h3 className="title__content">
+                    {skill.title}
+                    {skill.icon}
+                  </h3>
+                </li>
+              )
+            })
+          }
         </ul>
       </main>
     </div>

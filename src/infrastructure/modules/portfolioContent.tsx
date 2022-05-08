@@ -18,6 +18,21 @@ const PortfolioContent = () => {
             Portfolio
           </h2>
         </section>
+        <ul className="portfolio__list">
+            <li className="portfolio__item" style={{ background: `url("https://raw.githubusercontent.com/Marincor/marincor-portfolio/master/src/assets/img/projects/money%20control.png")`}}>
+                <h3 className="project__name">
+                  Bx Bank
+                </h3>
+                <p className="project__text">
+                  Lorem ipsum bloe daerim victaem dorl
+                </p>
+                <ul className="tag__list">
+                  <li className="tag item">
+                    HTML
+                  </li>
+                </ul>
+            </li>
+        </ul>
 
       </main>
     </div>

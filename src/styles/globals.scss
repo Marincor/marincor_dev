@@ -50,14 +50,37 @@ a {
   }
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #383030; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+
 
 /* Shared */
 @import "./shared/header.scss";
 
 /* Domains */
-@import "./domain/about.scss";
-@import "./domain/index.scss";
-@import "./domain/skills.scss";
+@import 
+"./domain/about.scss", 
+"./domain/skills.scss",
+"./domain/index.scss",
+"./domain/portfolio.scss";
 
 /* fonts */
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
