@@ -1,2 +1,16 @@
-
-
+.container__content {
+    min-height: 50vh;
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    .content {
+        font-family: $font-primary-titles;
+        font-weight: 100;
+        text-align: justify;
+        line-height: 1.5;
+        font-size: 1.2rem;
+        margin-top: 2rem;
+    }
+}

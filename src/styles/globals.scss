@@ -1,10 +1,15 @@
+/* Variables */ 
+  $color-white-primary: rgb(245, 243, 241) default;
+  $color-black-primary-titles: rgb(30, 30, 30);
+  $font-primary-titles: "Ubuntu", sans-serif;
+  $color-grey-texts: grey;
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: rgb(245,243,241);
+  font-family:$font-primary-titles;
+  background-color:  $color-white-primary;
   overflow-x: hidden;
 }
 
@@ -16,44 +21,44 @@ a {
 * {
   box-sizing: border-box;
 }
+.container__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+  .title {
+    font-family: $font-primary-titles;
+    text-align: center;
+    font-size: 46px;
+    text-transform: capitalize;
+    font-weight: 100;
+    border-bottom: 3px solid black;
+  }
+}
+.container__section {
+  animation: modal1 1s;
+}
+
+@keyframes modal1 {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 60px);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
 
 
 /* Shared */
-@import './shared/header.scss';
-@import './domain/about.scss';
+@import "./shared/header.scss";
 
-.main {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  .author {
-      color: rgb(30,30,30);
-      font-size: 74px;
-      width: 45px;
-      p {
-        width: auto;
-        padding: 0;
-        margin: 0;
-      }
-      .middlename {
-        margin-left: 2rem;
-      }
-    
-  }
+/* Domains */
+@import "./domain/about.scss";
+@import "./domain/index.scss";
+@import "./domain/skills.scss";
 
+/* fonts */
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
-}
-// 300 500
-.author-img {
-  margin-right: 2rem !important;
-  border-radius: 3rem !important;
-  opacity: 0.8;
-  background-image: url('../../public/assets/imgs/author.jpeg');
-  width: 300px;
-  height: 500px;
-  background-size: cover;
-  &:hover {
-    background-color: rgba(44, 36, 83, 0.2);
-    background-blend-mode: color;
-  }
-}
