@@ -18,8 +18,9 @@ const PortfolioContent = () => {
             Portfolio
           </h2>
         </section>
-        <ul className="portfolio__list">
-            <li className="portfolio__item" style={{ background: `url("https://raw.githubusercontent.com/Marincor/marincor-portfolio/master/src/assets/img/projects/money%20control.png")`}}>
+       <section className="container__portfolio-content">
+       <ul className="portfolio__list">
+            <li className="portfolio__item" style={{ background: `url("https://raw.githubusercontent.com/Marincor/marincor_dev/main/public/assets/imgs/projects/money%20control.png")`}}>
                 <h3 className="project__name">
                   Bx Bank
                 </h3>
@@ -34,6 +35,7 @@ const PortfolioContent = () => {
             </li>
         </ul>
 
+       </section>
       </main>
     </div>
     )

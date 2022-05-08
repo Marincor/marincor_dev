@@ -1,0 +1,20 @@
+.container__portfolio-content {
+    background-color: red;
+    width: 100vw;
+}
+
+ul {
+    list-style: none;
+}
+
+.portfolio__list {
+    background-color: blue;
+    width: 100%;
+
+    .portfolio__item {
+        background-size:cover;
+        background-repeat: no-repeat;
+        background-position:center;
+    }
+  
+}
