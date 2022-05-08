@@ -20,17 +20,30 @@ const PortfolioContent = () => {
         </section>
        <section className="container__portfolio-content">
        <ul className="portfolio__list">
-            <li className="portfolio__item" style={{ background: `url("https://raw.githubusercontent.com/Marincor/marincor_dev/main/public/assets/imgs/projects/money%20control.png")`}}>
+            <li className="portfolio__item" style={{ background: `url(https://raw.githubusercontent.com/Marincor/marincor_dev/main/public/assets/imgs/projects/money_control.png)`, backgroundColor: "rgba(55, 54, 59, 0.5)", backgroundBlendMode: "color", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center"}}>
                 <h3 className="project__name">
-                  Bx Bank
+                 Money Control
                 </h3>
                 <p className="project__text">
-                  Lorem ipsum bloe daerim victaem dorl
+                Aplicação para controle e gerenciamento de gastos. Foi criada com a ideia de ter uma visão macro sobre os gastos mensais e um comparativo de ganhos e custos em relação ao mês atual e o anterior do ano vigente. 
                 </p>
                 <ul className="tag__list">
-                  <li className="tag item">
-                    HTML
+                  <li className="tag__item">
+                      <small className="tag__name">
+                        html
+                      </small>
                   </li>
+                  <li className="tag__item">
+                      <small className="tag__name">
+                        html
+                      </small>
+                  </li>
+                  <li className="tag__item">
+                      <small className="tag__name">
+                        html
+                      </small>
+                  </li>
+           
                 </ul>
             </li>
         </ul>
