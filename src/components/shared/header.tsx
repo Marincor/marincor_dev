@@ -1,10 +1,12 @@
 import Logo from '../../../public/assets/imgs/marincor-v2.png'
 import Image from 'next/image'
 import brazilIcon from '../../../public/assets/imgs/brazil.svg'
-import { useState } from 'react'
+import usaIcon from '../../../public/assets/imgs/usa.svg'
+import { useContext, useState } from 'react'
 import menuIcon from '../../../public/assets/imgs/menu-icon.svg'
 import closeIcon from '../../../public/assets/imgs/close.svg'
 import { useRouter } from 'next/router'
+import LanguageContext from '../../store/language_context'
 
 const Header = () => {
     const [showMobileMenu, setMobileMenu] = useState(false);
@@ -12,21 +14,26 @@ const Header = () => {
     const redirectTo = (route: string) => {
         router.push(route)
     };
+    const {language, setLanguage} = useContext(LanguageContext);
     const menuItens = [
         {
-            pt: "Início",
+            "pt-BR": "Início",
+            "en-US": "Home",
             href: "/"
         },
         {
-            pt: "Sobre",
+            "pt-BR": "Sobre",
+            "en-US": "About",
             href: "/about"
         },
         {
-            pt: "Skills",
+            "pt-BR": "Skills",
+            "en-US": "Skills",
             href: "/skills"
         },
         {
-            pt: "Portfolio",
+            "pt-BR": "Portfolio",
+            "en-US": "Portfolio",
             href: "/portfolio"
         },
 
@@ -42,16 +49,18 @@ const Header = () => {
                         {menuItens.map((item) => {
                             return (
 
-                                <li key={item.pt} className="header__menuItem">
+                                <li key={item[language]} className="header__menuItem">
                                     <a href={item.href}>
-                                        {item.pt}
+                                        {item[language]}
                                     </a>
                                 </li>
                             )
                         })}
                         <li className="header__menuItem-lang">
-                            <button style={{ width: 'auto', backgroundColor: "transparent", border: 'none', cursor: 'pointer', display: "flex", alignItems: "center" }}>
-                                <Image src={brazilIcon} alt="pt-bR" width={20} height={20} />
+                            <button style={{ width: 'auto', backgroundColor: "transparent", border: 'none', cursor: 'pointer', display: "flex", alignItems: "center" }}
+                                onClick={()=>{setLanguage(language === "pt-BR" ? "en-US" : "pt-BR")}}
+                            >
+                                <Image src={language === "pt-BR" ? usaIcon : brazilIcon} alt={language} width={20} height={20} />
                             </button>
 
                         </li>
@@ -68,14 +77,14 @@ const Header = () => {
                             {menuItens.map((item) => {
                                 return (
 
-                                    <li key={item.pt} className="header__menuItem" onClick={() => {redirectTo(item.href)}}>
-                                          {item.pt}
+                                    <li key={item[language]} className="header__menuItem" onClick={() => {redirectTo(item.href)}}>
+                                          {item[language]}
                                     </li>
                                 )
                             })}
                         </ul>
                         <button className='btn__language' >
-                            <Image src={brazilIcon} alt="pt-bR" width={20} height={20} />
+                            <Image src={brazilIcon} alt={language} width={20} height={20} />
                         </button>
                         <button className='wrapper__btn-close' onClick={() => { setMobileMenu(false) }}>
                             <Image src={closeIcon} alt="menu" width={30} height={30} className="menu_toggle"

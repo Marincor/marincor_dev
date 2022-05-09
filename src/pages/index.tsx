@@ -1,14 +1,23 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { useEffect } from 'react'
+import { useContext, useEffect } from 'react'
 import { typeWriter } from '../infrastructure/utils'
+import LanguageContext from '../store/language_context'
 
 
 const Home: NextPage = () => {
+  const {language} = useContext(LanguageContext);
 
  useEffect(()=>{
-  if(typeof window !== "undefined") typeWriter('.author-paper')
- }, []);
+  if(typeof window !== "undefined") setTimeout(() => {
+    typeWriter('.author-paper')
+  },1);
+ }, [language]);
+
+ const role = {
+   "pt-BR": "Desenvolvedor front-end",
+   "en-US": "Front-end developer"
+ }
 
   return (
     <div>
@@ -28,7 +37,7 @@ const Home: NextPage = () => {
                 <p className='middlename'>Claudino</p>
                 <p className='lastname'>Marinho</p>
           </h2>
-          <p className='author-paper'>Desenvolvedor front-end</p>
+          <p className='author-paper'>{role[language]}</p>
 
           <div className="contianer__media">
               <a href="mailto:gabriel.cmunivos@protonmail.com" className='media-item'  rel="noopener noreferrer" target="_blank">E-mail</a>
