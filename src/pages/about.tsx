@@ -12,7 +12,7 @@ const About: NextPage = () => {
     },
     "en-US": {
       title: "About",
-      text: "Hello, I'm Gabriel Marinho, developer. I Have notion of Back-end too, already developing projects in Python and Golang. I love to learn and search and give my best always in all roles, with a focus on improving the process and implementing new features. I love to architecture new solutions, from the code to the diagram of the process, tests, and documentation, keeping me updated about the good practices, new versions of the used technologies, and development guide by security practices (OWASP). I understand that the product that I deliver will impact the life of the final user and because of that is important to do it with quality and dedication!"
+      text: "Hello, I'm Gabriel Marinho, developer with focus on Front-end. I Have notion of Back-end too, already developing projects in Python and Golang. I love to learn and search and give my best always in all roles, with a focus on improving the process and implementing new features. I love to architecture new solutions, from the code to the diagram of the process, tests, and documentation, keeping me updated about the good practices, new versions of the used technologies, and development guide by security practices (OWASP). I understand that the product that I deliver will impact the life of the final user and because of that is important to do it with quality and dedication!"
     }
   }
   return (
