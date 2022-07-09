@@ -15,8 +15,8 @@ const Home: NextPage = () => {
  }, [language]);
 
  const role = {
-   "pt-BR": "Desenvolvedor front-end",
-   "en-US": "Front-end developer"
+   "pt-BR": "Desenvolvedor",
+   "en-US": "Developer"
  }
 
   return (

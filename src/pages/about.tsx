@@ -8,11 +8,11 @@ const About: NextPage = () => {
   const content = {
     "pt-BR": {
       title: "Sobre",
-      text: "  Olá, sou Gabriel Marinho, desenvolvedor front-end. Depois de ter estruturado uma conta digital na parte operacional do negócio, como analista de operações, piloto de reserva e analista QA, resolvi mudar para a área de tecnologia; Adoro aprender e busco dar o melhor de mim em todas as funções, com foco em melhoria de processos e novas implementações. Sou apaixonado por desenvolver e quero transformar uma ideia em algo real!"
+      text: "Olá, sou Gabriel Marinho, desenvolvedor com foco em Front-end trabalhando atualmente com ReactJS, NextJS, Angular, Flutter e VTEX-IO;Tenho noções de Back-end também, já tendo trabalhado desenvolvendo projetos em Python e Golang. Adoro aprender e busco dar o melhor de mim em todas as funções, com foco em melhoria de processos e novas implementações. Sou apaixonado por arquitetar soluções, desde o código, até os diagramas dos processos, testes e documentações, me mantendo atualizado  a respeito de boas práticas, novas versões das tecnologias utilizadas e desenvolvimento guiado à práticas de segurança (OWASP). Entendo que o produto que entrego impactará a vida do usuário final e por isso é importante fazer com qualidade e dedicação!"
     },
     "en-US": {
       title: "About",
-      text: "Hello, I'm Gabriel Marinho, front-end developer. After structure a digital account in the operational area as operations analyst, reserve pilot in the bank account and QA analyst, changed to the tech area. I adore learning and want always to give my best in every function, with a focus on improving procedures and implement new features. I love coding and I want to transform an idea into something real!"
+      text: "Hello, I'm Gabriel Marinho, developer. Have notion of Back-end too, already developing projects in Python and Golang. I love to learn and search and give my best always in all roles, with a focus on improving the process and implementing new features. I love to architecture new solutions, from the code to the diagram of the process, tests, and documentation, keeping me updated about the good practices, new versions of the used technologies, and development guide by security practices (OWASP). I understand that the product that I deliver will impact the life of the final user and because of that is important to do it with quality and dedication!"
     }
   }
   return (
