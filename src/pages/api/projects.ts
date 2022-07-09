@@ -47,6 +47,48 @@ const projectLanguage: PortfolioModel[] = [
     ],
   },
   {
+    link_code: "https://github.com/Marincor/4dias_api",
+    link_site: "https://app.swaggerhub.com/apis-docs/GABRIELCMUNIVOS/4_days/1.0.0#/",
+    project_description: {
+      "en-US": "Python(Flask) API to the open-source application 4 dias",
+      "pt-BR": "API em Python(Flask) para o projeto open-source 4 dias"
+    },
+    project_img: "4days_api",
+    project_name: "API - 4 dias",
+    tags: [
+      {
+        tag_name: "Python",
+      },
+      {
+        tag_name: "Flask"
+      },
+      {
+        tag_name: "PostgreSQL"
+      }
+    ],
+  },
+  {
+    link_code: "https://github.com/Marincor/4dias",
+    link_site: "https://4dias.vercel.app/",
+    project_description: {
+      "en-US": "4 dias is an open-source project that I created with the purpose to aggregate all Brazilian companies that implemented the 4 days of work per week, to encourage the ones that have not implemented yet see the benefits of this new model.",
+      "pt-BR": "4 dias é um projeto open-source que criei com o propósito de agregar todas as empresas brasileiras que implementaram 4 dias de trabalho por semana, para encorajar as que ainda não fizeram o mesmo a ver os benefícios desse novo modelo."
+    },
+    project_img: "4days",
+    project_name: "4 dias",
+    tags: [
+      {
+        tag_name: 'Angular'
+      },
+      {
+        tag_name: "TypeScript"
+      },
+      {
+        tag_name: "Sass"
+      }
+    ]
+  },
+  {
     link_code: "https://github.com/Marincor/amigo-oculto",
     link_site: "https://amigo-oculto.vercel.app/",
     project_description: {

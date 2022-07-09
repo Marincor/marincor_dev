@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import { FaJs, FaReact } from 'react-icons/fa';
-import { SiHtml5, SiCss3, SiTypescript, SiNextdotjs, SiAngular, SiFlutter, SiCypress, SiJest, SiJasmine, SiGoogle } from 'react-icons/si';
+import { SiHtml5, SiCss3, SiTypescript, SiNextdotjs, SiAngular, SiFlutter, SiCypress, SiJest, SiJasmine, SiGoogle, SiPython } from 'react-icons/si';
 import { SkillsListModel } from '../infrastructure/interfaces/modules/skills';
 
 const Skills: NextPage = () => {
@@ -54,6 +54,10 @@ const Skills: NextPage = () => {
     {
       title: "Goolang",
       icon: <SiGoogle />
+    },
+    {
+      title: "Python",
+      icon: <SiPython />
     }
   ]
 
