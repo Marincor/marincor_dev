@@ -11,6 +11,7 @@ const PortfolioContent = () => {
     window.open(route, "_blank")
   }
   const { language } = useContext(LanguageContext);
+  const [ loading, setLoading ] = useState(true)
   const [projects, setProjects] = useState<PortfolioModel[]>([
     {
       link_code: "",
@@ -34,7 +35,10 @@ const PortfolioContent = () => {
     fetch("/api/projects").then(async (res) => {
       let project = await res.json();
       setProjects(project);
-    })
+    });
+
+    setLoading(false)
+    
   }, []);
 
 
@@ -60,6 +64,7 @@ const PortfolioContent = () => {
         <section className="container__portfolio-content">
           <ul className="portfolio__list">
             {
+              !loading &&
               projects.map((project, index) => {
                 return (
                   <li key={project.project_name} className="portfolio__item" style={{ background: `url(https://raw.githubusercontent.com/Marincor/marincor_dev/main/public/assets/imgs/projects/${project.project_img}.png)`, backgroundColor: "rgba(55, 54, 59, 0.5)", backgroundBlendMode: "color", backgroundRepeat: "no-repeat", backgroundSize: "cover", backgroundPosition: "center" }}
