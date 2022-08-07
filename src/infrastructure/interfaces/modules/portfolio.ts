@@ -1,3 +1,5 @@
+import { languages } from "../languages";
+
 export interface PortfolioModel {
     project_name: string;
     project_description: {
@@ -12,4 +14,10 @@ export interface PortfolioModel {
 
 interface TagsModel {
     tag_name: string;
+}
+
+export interface PortfolioProps {
+    projects: PortfolioModel[];
+    redirectTo: (route: string) => void;
+    language: languages;
 }
