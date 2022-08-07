@@ -9,3 +9,7 @@ export function typeWriter(elementIdentify: string) {
       }, 120 * index);
     }) : false;
 }
+
+export const redirectTo = (route: string) => {
+  window.open(route, "_blank")
+}

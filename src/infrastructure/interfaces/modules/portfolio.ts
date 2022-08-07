@@ -20,4 +20,5 @@ export interface PortfolioProps {
     projects: PortfolioModel[];
     redirectTo: (route: string) => void;
     language: languages;
+    goTo: (route: string) => void;
 }

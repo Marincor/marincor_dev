@@ -4,7 +4,7 @@ import { BsFileEarmarkCodeFill } from 'react-icons/bs';
 import { PortfolioProps } from "../interfaces/modules/portfolio";
 
 
-const PortfolioContent = ({ projects, redirectTo, language }: PortfolioProps) => {
+const PortfolioContent = ({ projects, redirectTo, language, goTo }: PortfolioProps) => {
 
   return (
     <div>
@@ -50,7 +50,7 @@ const PortfolioContent = ({ projects, redirectTo, language }: PortfolioProps) =>
                     {
                       project.tags.map((tag) => {
                         return (
-                          <li key={tag.tag_name} className="tag__item">
+                          <li key={tag.tag_name} className="tag__item" onClick={() => goTo(`/portfolio/${tag.tag_name.toLocaleLowerCase().split(" ")[0]}`)}>
                             <small className="tag__name">
                               {tag.tag_name}
                             </small>

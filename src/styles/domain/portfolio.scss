@@ -69,6 +69,10 @@ ul {
           color: white;
           text-transform: uppercase;
           font-size: 10px;
+          &:hover {
+            background-color: white;
+            color: black;
+          }
         }
       }
     }
