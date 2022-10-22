@@ -237,7 +237,7 @@ const companieProjects:  PortfolioModel[] = [
     project_name: "Instituto Ronald McDonald (McDia Feliz) - 2022",
     tags: [
       {
-        tag_name: "VTEX-IO",
+        tag_name: "VTEX IO",
       },
       {
         tag_name: "React",
