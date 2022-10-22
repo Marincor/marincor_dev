@@ -7,6 +7,7 @@ import { getProjects } from "../../infrastructure/services/projects";
 import { redirectTo } from "../../infrastructure/utils";
 import LanguageContext from "../../store/language_context";
 
+
 export async function getStaticPaths() {
     return {
         paths: [
@@ -29,31 +30,40 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context: any) {
+
     return {
         props: {
-            projects: await getProjects(),
+            personal: await getProjects('personal'),
+            companies: await getProjects('companies'),
         },
         revalidate: 43200
     }
 }
 
 const Label = (props: any) => {
-    const { projects } = props;
+    
+    const { personal, companies } = props;
+    const [type, setType] = useState<'personal' | 'companies'>('companies');
     const router = useRouter();
     const { language } = useContext(LanguageContext);
     const [loading, setLoading] = useState(true);
     let label: string = router.query.label as string;
 
-    let projectsFiltered: PortfolioModel[] = projects.filter((card: PortfolioModel) => (
+    let projectsFiltered: PortfolioModel[] = personal.filter((card: PortfolioModel) => (
+        card.tags.some(tag => tag.tag_name.toLocaleUpperCase().includes(label.toUpperCase()))
+    ));
+
+    let companiesFiltered: PortfolioModel[] = companies.filter((card: PortfolioModel) => (
         card.tags.some(tag => tag.tag_name.toLocaleUpperCase().includes(label.toUpperCase()))
     ));
 
 
     useEffect(() => {
+        setType(router?.query?.type as 'companies' || 'personal')
         setTimeout(() => {
             setLoading(false)
         }, 1000);
-
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const goTo = (route: string) => {
@@ -68,7 +78,7 @@ const Label = (props: any) => {
 
     return (
         !loading ?
-            <PortfolioContent language={language} projects={projectsFiltered} redirectTo={redirectTo} goTo={goTo} /> :
+            <PortfolioContent setType={setType} type={type} language={language} companie={companiesFiltered} personal={projectsFiltered} redirectTo={redirectTo} goTo={goTo} /> :
             <Spinner />
     )
 }

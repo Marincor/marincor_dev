@@ -9,7 +9,6 @@ import { useRouter } from 'next/router'
 import LanguageContext from '../../store/language_context'
 
 const Header = () => {
-    const [showMobileMenu, setMobileMenu] = useState(false);
     const router = useRouter();
     const redirectTo = (route: string) => {
         router.push(route)
@@ -39,6 +38,14 @@ const Header = () => {
 
     ]
 
+    const showMenu = () => {
+        const menuElement = document.querySelector('.header__mobile');
+        if(menuElement?.classList.contains('active')) {
+            menuElement?.classList.remove('active');
+        }else {
+            menuElement?.classList.add('active');
+        }
+    }
 
     return (
         <>
@@ -57,7 +64,7 @@ const Header = () => {
                             )
                         })}
                         <li className="header__menuItem-lang">
-                            <button style={{ width: 'auto', backgroundColor: "transparent", border: 'none', cursor: 'pointer', display: "flex", alignItems: "center" }}
+                            <button className='btn__language'
                                 onClick={()=>{setLanguage(language === "pt-BR" ? "en-US" : "pt-BR")}}
                             >
                                 <Image src={language === "pt-BR" ? usaIcon : brazilIcon} alt={language} width={20} height={20} />
@@ -69,7 +76,7 @@ const Header = () => {
             </header>
 
             {
-                showMobileMenu &&
+              
                 <header className="header__mobile">
                     <nav className="header__menu">
                         <Image src={Logo} alt="Marincor" width={50} height={50} className="logo" />
@@ -83,10 +90,10 @@ const Header = () => {
                                 )
                             })}
                         </ul>
-                        <button className='btn__language' >
-                            <Image src={brazilIcon} alt={language} width={20} height={20} />
+                        <button className='btn__language' onClick={()=>{setLanguage(language === "pt-BR" ? "en-US" : "pt-BR")}} >
+                            <Image  src={language === "pt-BR" ? usaIcon : brazilIcon} alt={language} width={20} height={20} />
                         </button>
-                        <button className='wrapper__btn-close' onClick={() => { setMobileMenu(false) }}>
+                        <button className='wrapper__btn-close' onClick={() => { showMenu() }}>
                             <Image src={closeIcon} alt="menu" width={30} height={30} className="menu_toggle"
                             />
                         </button>
@@ -95,10 +102,10 @@ const Header = () => {
             }
 
             {
-                !showMobileMenu &&
+              
                 <nav className='wrapper__menuMobile'>
                     <Image src={Logo} alt="Marincor" width={50} height={50} className="logo_" />
-                    <button className='wrapper__btn' onClick={() => { setMobileMenu(true) }}>
+                    <button className='wrapper__btn' onClick={() => {showMenu() }}>
                         <Image src={menuIcon} alt="menu" width={30} height={30} className="menu_toggle"
                         />
                     </button>

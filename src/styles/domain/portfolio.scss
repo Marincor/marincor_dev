@@ -103,3 +103,28 @@ ul {
 }
 
 
+
+
+.project-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin: 2rem;
+  button {
+    width: 150px;
+    border-radius: 5px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+    outline: none;
+    border: none;
+    box-shadow: rgba(71, 68, 68, 0.15) 0px 5px 15px 0px;
+    cursor: pointer;
+    &:hover {
+      background-color: white;
+      color: black;
+    }
+  }
+}

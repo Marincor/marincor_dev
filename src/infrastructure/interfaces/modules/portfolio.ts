@@ -9,7 +9,7 @@ export interface PortfolioModel {
     project_img: string;
     tags: TagsModel[];
     link_code: string;
-    link_site: string;
+    link_site?: string;
 }
 
 interface TagsModel {
@@ -17,8 +17,19 @@ interface TagsModel {
 }
 
 export interface PortfolioProps {
+    personal: PortfolioModel[];
+    companie: PortfolioModel[];
+    redirectTo: (route: string) => void;
+    language: languages;
+    goTo: (route: string) => void;
+    type: 'companies' | 'personal';
+    setType: React.Dispatch<React.SetStateAction<"companies" | "personal">>
+}
+
+export interface PersonalProjectProps {
     projects: PortfolioModel[];
     redirectTo: (route: string) => void;
     language: languages;
     goTo: (route: string) => void;
+    type: 'companies' | 'personal';
 }

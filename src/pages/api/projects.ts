@@ -2,7 +2,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { PortfolioModel } from "../../infrastructure/interfaces/modules/portfolio";
 
-const projectLanguage: PortfolioModel[] = [
+const personalProjects: PortfolioModel[] = [
   {
     link_code: "https://github.com/Marincor/Money-Control",
     link_site: "https://money-control.vercel.app/",
@@ -205,9 +205,57 @@ const projectLanguage: PortfolioModel[] = [
   }
 ];
 
+const companieProjects:  PortfolioModel[] = [
+  {
+    link_code: "https://www.youtube.com/watch?v=UmZqo4fSsgg",
+    project_description: {
+      "pt-BR":
+        "Web App para o McDonalds e Coca-Cola LATAM (Argentina, Chile, Colômbia, Costa Rica, Equador, Peru, Panamá, México, Uruguai) - Gerar engajamento entre cliente e marca, distribuindo prêmios através de interatividade com a aplicação.",
+      "en-US":
+        "Web App to McDonalds and Coca-Cola LATAM (Argentina, Chile, Colômbia, Costa Rica, Equador, Peru, Panamá, México, Uruguai) - Generate engagement between customer and brand, distributing prizes through interactivity with the application.",
+    },
+    project_img: "cuenta_regressiva",
+    project_name: "McDonald's & Coca-Cola: Cuenta Regresiva para Las Fiestas",
+    tags: [
+      {
+        tag_name: "Next Js",
+      },
+      {
+        tag_name: "SASS",
+      },
+    ],
+  },
+  {
+    link_code: "https://www.mcdiafeliz.org.br/",
+    project_description: {
+      "pt-BR":
+        "E-commerce para o Instituto Ronald McDonald feito para promover campanhas de arrecadação voltadas para o tratamento contra o câncer em crianças e adolescentes com incentivo do MCdia Feliz - Venda de produtos do Instituto, Doações e Cupons de desconto.",
+      "en-US":
+        "E-commerce for the Ronald McDonald Institute designed to promote fundraising campaigns aimed at cancer treatment for children and adolescents with the incentive of MCdia Feliz - Sale of Institute products, Donations and Discount Coupons.",
+    },
+    project_img: "irm",
+    project_name: "Instituto Ronald McDonald (McDia Feliz) - 2022",
+    tags: [
+      {
+        tag_name: "VTEX-IO",
+      },
+      {
+        tag_name: "React",
+      },
+    ],
+  },
+]
+
+const allProjects =  {
+  personal: personalProjects,
+  companies: companieProjects
+}
+
+
+
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<PortfolioModel[]>
 ) {
-  res.status(200).json(projectLanguage);
+  res.status(200).json(allProjects[req.query.type as 'companies' | 'personal']);
 }

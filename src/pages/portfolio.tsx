@@ -11,14 +11,16 @@ export async function getStaticProps() {
 
   return {
     props: {
-      projects: await getProjects()
+      personal: await getProjects('personal'),
+      companies: await getProjects('companies'),
     },
     revalidate: 43200
   }
 }
 
 const Portfolio: NextPage = (props: any) => {
-  const { projects } = props;
+  const { personal, companies } = props;
+  const [type, setType] = useState<'personal' | 'companies'>('companies');
 
   const { language } = useContext(LanguageContext);
   const [loading, setLoading] = useState(true);
@@ -45,7 +47,7 @@ const Portfolio: NextPage = (props: any) => {
 
   return (
     !loading ?
-      <PortfolioContent language={language} projects={projects} redirectTo={redirectTo} goTo={goTo} /> :
+      <PortfolioContent type={type} setType={setType} language={language} companie={companies} personal={personal} redirectTo={redirectTo} goTo={goTo} /> :
       <Spinner />
   )
 }

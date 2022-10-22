@@ -39,7 +39,7 @@ const Home: NextPage = () => {
           </h2>
           <p className='author-paper'>{role[language]}</p>
 
-          <div className="contianer__media">
+          <div className="container__media">
               <a href="mailto:gabriel.cmunivos@protonmail.com" className='media-item'  rel="noopener noreferrer" target="_blank">E-mail</a>
               <a href="https://www.linkedin.com/in/gabriel-claudino-marinho-b88823179/" className='media-item'  rel="noopener noreferrer" target="_blank">Linkedin</a>
               <a href="https://github.com/Marincor" className='media-item'  rel="noopener noreferrer" target="_blank" >Github</a>
