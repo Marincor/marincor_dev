@@ -224,6 +224,25 @@ const companieProjects:  PortfolioModel[] = [
         tag_name: "SASS",
       },
     ],
+  },{
+    link_code: "https://www.mcdonalds.com.br/bolaodomequi",
+    project_description: {
+      "pt-BR": "WebApp feito para o McDonalds Brasil para palpites da Copa do Mundo Fifa 2022. Principais features: Palpites em jogos, melhores seleções, sign-in, login/logout, rankings, estatisticas e notificações com webpush e webhooks, entre outros. ",
+      "en-US": "WebApp made for McDonalds Brasil for the FIFA World Cup 2022 bets. Main features: Bets in games, Bets in best players, sign-in, login/logout, rankings, statistics and notifications with webpush and webhooks, among others."
+    },
+    project_img: "bolao_do_mequi",
+    project_name: "Bolão do Méqui",
+    tags: [
+      {
+        tag_name: "Next Js"
+      },
+      {
+        tag_name: "Apache Beam - Python"
+      },
+      {
+        tag_name: "Golang"
+      },
+    ]
   },
   {
     link_code: "https://www.mcdiafeliz.org.br/",
