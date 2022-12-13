@@ -48,10 +48,11 @@ const personalProjects: PortfolioModel[] = [
   },
   {
     link_code: "https://github.com/Marincor/4dias_api",
-    link_site: "https://app.swaggerhub.com/apis-docs/GABRIELCMUNIVOS/4_days/1.0.0#/",
+    link_site:
+      "https://app.swaggerhub.com/apis-docs/GABRIELCMUNIVOS/4_days/1.0.0#/",
     project_description: {
       "en-US": "Python(Flask) API to the open-source application 4 dias",
-      "pt-BR": "API em Python(Flask) para o projeto open-source 4 dias"
+      "pt-BR": "API em Python(Flask) para o projeto open-source 4 dias",
     },
     project_img: "4days_api",
     project_name: "API - 4 dias",
@@ -60,33 +61,35 @@ const personalProjects: PortfolioModel[] = [
         tag_name: "Python",
       },
       {
-        tag_name: "Flask"
+        tag_name: "Flask",
       },
       {
-        tag_name: "PostgreSQL"
-      }
+        tag_name: "PostgreSQL",
+      },
     ],
   },
   {
     link_code: "https://github.com/Marincor/4dias",
     link_site: "https://4dias.vercel.app/",
     project_description: {
-      "en-US": "4 dias is an open-source project that I created with the purpose to aggregate all Brazilian companies that implemented the 4 days of work per week, to encourage the ones that have not implemented yet see the benefits of this new model.",
-      "pt-BR": "4 dias é um projeto open-source que criei com o propósito de agregar todas as empresas brasileiras que implementaram 4 dias de trabalho por semana, para encorajar as que ainda não fizeram o mesmo a ver os benefícios desse novo modelo."
+      "en-US":
+        "4 dias is an open-source project that I created with the purpose to aggregate all Brazilian companies that implemented the 4 days of work per week, to encourage the ones that have not implemented yet see the benefits of this new model.",
+      "pt-BR":
+        "4 dias é um projeto open-source que criei com o propósito de agregar todas as empresas brasileiras que implementaram 4 dias de trabalho por semana, para encorajar as que ainda não fizeram o mesmo a ver os benefícios desse novo modelo.",
     },
     project_img: "4days",
     project_name: "4 dias",
     tags: [
       {
-        tag_name: 'Angular'
+        tag_name: "Angular",
       },
       {
-        tag_name: "TypeScript"
+        tag_name: "TypeScript",
       },
       {
-        tag_name: "Sass"
-      }
-    ]
+        tag_name: "Sass",
+      },
+    ],
   },
   {
     link_code: "https://github.com/Marincor/amigo-oculto",
@@ -189,23 +192,25 @@ const personalProjects: PortfolioModel[] = [
     link_code: "https://github.com/Marincor/netflix-clone",
     link_site: "https://netflix-clone-marincor.vercel.app/",
     project_description: {
-      "en-US": "Study about page - a movie list based on the Netflix layout. Used API: The Movie Database",
-      "pt-BR": "Estudo sobre pagina - uma lista de filmes baseada no layout da Netflix. API usada: The Movie Database." 
+      "en-US":
+        "Study about page - a movie list based on the Netflix layout. Used API: The Movie Database",
+      "pt-BR":
+        "Estudo sobre pagina - uma lista de filmes baseada no layout da Netflix. API usada: The Movie Database.",
     },
     project_img: "netflix",
     project_name: "Netflix - Movie List Concept",
     tags: [
       {
-        tag_name: "React Js"
+        tag_name: "React Js",
       },
       {
-        tag_name: "Styled-Components"
-      }
-    ]
-  }
+        tag_name: "Styled-Components",
+      },
+    ],
+  },
 ];
 
-const companieProjects:  PortfolioModel[] = [
+const companieProjects: PortfolioModel[] = [
   {
     link_code: "https://www.youtube.com/watch?v=UmZqo4fSsgg",
     project_description: {
@@ -224,25 +229,28 @@ const companieProjects:  PortfolioModel[] = [
         tag_name: "SASS",
       },
     ],
-  },{
-    link_code: "https://www.mcdonalds.com.br/bolaodomequi",
+  },
+  {
+    link_code: "https://www.youtube.com/watch?v=B7TFcWXxqMA",
     project_description: {
-      "pt-BR": "WebApp feito para o McDonalds Brasil para palpites da Copa do Mundo Fifa 2022. Principais features: Palpites em jogos, melhores seleções, sign-in, login/logout, rankings, estatisticas e notificações com webpush e webhooks, entre outros. ",
-      "en-US": "WebApp made for McDonalds Brasil for the FIFA World Cup 2022 bets. Main features: Bets in games, Bets in best players, sign-in, login/logout, rankings, statistics and notifications with webpush and webhooks, among others."
+      "pt-BR":
+        "WebApp feito para o McDonalds Brasil para palpites da Copa do Mundo Fifa 2022. Principais features: Palpites em jogos, melhores seleções, sign-in, login/logout, rankings, estatisticas e notificações com webpush e webhooks, entre outros. ",
+      "en-US":
+        "WebApp made for McDonalds Brasil for the FIFA World Cup 2022 bets. Main features: Bets in games, Bets in best players, sign-in, login/logout, rankings, statistics and notifications with webpush and webhooks, among others.",
     },
     project_img: "bolao_do_mequi",
     project_name: "Bolão do Méqui",
     tags: [
       {
-        tag_name: "Next Js"
+        tag_name: "Next Js",
       },
       {
-        tag_name: "Apache Beam - Python"
+        tag_name: "Apache Beam - Python",
       },
       {
-        tag_name: "Golang"
+        tag_name: "Golang",
       },
-    ]
+    ],
   },
   {
     link_code: "https://www.mcdiafeliz.org.br/",
@@ -263,18 +271,16 @@ const companieProjects:  PortfolioModel[] = [
       },
     ],
   },
-]
+];
 
-const allProjects =  {
+const allProjects = {
   personal: personalProjects,
-  companies: companieProjects
-}
-
-
+  companies: companieProjects,
+};
 
 export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<PortfolioModel[]>
 ) {
-  res.status(200).json(allProjects[req.query.type as 'companies' | 'personal']);
+  res.status(200).json(allProjects[req.query.type as "companies" | "personal"]);
 }
