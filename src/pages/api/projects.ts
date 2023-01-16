@@ -257,9 +257,9 @@ const companieProjects: PortfolioModel[] = [
     link_code: "https://web.facebook.com/McDonaldsPeru/photos/5828895053823612",
     project_description: {
       "pt-BR":
-        "WebApp feito para o McDonalds Latam para engajamento dos clientes, possibilitando ganhar cupons através de acesso e jogo no aplicativo. Principais features: Sign-in, login/logout, rankings, carteira de cupons e outros. ",
+        "WebApp feito para o McDonalds Latam para engajamento dos clientes, possibilitando ganhar cupons através de acesso diário e jogo no aplicativo. Principais features: Sign-in, login/logout, rankings, carteira de cupons e outros. ",
       "en-US":
-        "WebApp was made for McDonalds Latam to engage customers, allowing them to earn coupons through in-app access and play. Main features: Sign-in, login/logout, rankings, coupon wallet and others.",
+        "WebApp was made for McDonalds Latam to engage customers, allowing them to earn coupons through daily access in-app and play the game. Main features: Sign-in, login/logout, rankings, coupon wallet and others.",
     },
     project_img: "juntos_por_el_gol",
     project_name: "Juntos Por El Gol",
