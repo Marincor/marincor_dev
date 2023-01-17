@@ -215,7 +215,7 @@ const companieProjects: PortfolioModel[] = [
     link_code: "https://www.mcdonalds.com.mx/",
     project_description: {
       "pt-BR":
-        "Instant App em facebook (meta) feito para o McDonalds LATAM (Argentina, México, Costa Rica e Puerto Rico) para gerar engajamento, onde o usuário joga e é ganha cupons. Utilizado diversas técnicas de animação com css para obter performance de 60 fps no loading animado da aplicação.",
+        "Instant App em facebook (meta) feito para o McDonalds LATAM (Argentina, México, Costa Rica e Puerto Rico) para gerar engajamento, onde o usuário joga e ganha cupons. Utilizado diversas técnicas de animação com css para obter performance de 60 fps no loading animado da aplicação.",
       "en-US":
         "Instant App on facebook (meta) made for McDonalds LATAM (Argentina, Mexico, Costa Rica and Puerto Rico) to generate engagement, where the user plays and gets coupons. Used several animation techniques with css to obtain 60 fps performance in the application's animated loading.",
     },
