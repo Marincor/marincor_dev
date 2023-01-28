@@ -8,7 +8,7 @@ const About: NextPage = () => {
   const content = {
     "pt-BR": {
       title: "Sobre",
-      text: "Olá, sou Gabriel Marinho, desenvolvedor de software trabalhando atualmente com ReactJS, NextJS, Angular, Flutter e VTEX-IO. Tenho noções de Back-end também, já tendo desenvolvido projetos em Python e Golang. Adoro aprender e busco dar o melhor de mim em todas as funções, especialmente melhorando processos e realizando novas implementações. Sou apaixonado por arquitetar soluções, desde o código, até os diagramas dos processos, testes e documentações, me mantendo atualizado  a respeito de boas práticas, novas versões das tecnologias utilizadas e desenvolvimento guiado à práticas de segurança (OWASP). Entendo que o produto que entrego impactará a vida do usuário final e por isso é importante fazer com qualidade e dedicação!"
+      text: "Olá, sou Gabriel Marinho, desenvolvedor de software trabalhando atualmente com ReactJS, NextJS, Angular, Flutter e VTEX-IO. Tenho noções de Back-end também, já tendo desenvolvido projetos em Python e Golang. Adoro aprender e busco dar o melhor de mim em todas as funções, especialmente melhorando processos e realizando novas implementações. Sou apaixonado por arquitetar soluções, desde o código, até os diagramas dos processos, testes e documentações, me mantendo atualizado  a respeito de boas práticas, novas versões das tecnologias utilizadas e desenvolvimento guiado às práticas de segurança (OWASP). Entendo que o produto que entrego impactará a vida do usuário final e por isso é importante fazer com qualidade e dedicação!"
     },
     "en-US": {
       title: "About",
