@@ -211,6 +211,31 @@ const personalProjects: PortfolioModel[] = [
 ];
 
 const companieProjects: PortfolioModel[] = [
+     {
+    link_code: "https://play.google.com/store/apps/details?id=com.org.pontoe",
+    project_description: {
+      "pt-BR":
+        "Aplicativo de compra de produtos pelo aplicativo com cashback em pontos, focado em proporcionar o acesso à educação com mais de 10 mil downloads.",
+      "en-US":
+        "Application for purchasing products through the application with cashback in points focused on providing access to education with more than 10 thousand downloads.",
+    },
+    project_img: "pontoe",
+    project_name: "PontoE",
+    tags: [
+      {
+        tag_name: "Flutter",
+      },
+      {
+        tag_name: "Firebase",
+      },
+      {
+        tag_name: "Python",
+      },
+        {
+        tag_name: "Golang",
+      },
+    ],
+  },
    {
     link_code: "https://www.mcdonalds.com.mx/",
     project_description: {
