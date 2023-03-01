@@ -215,9 +215,9 @@ const companieProjects: PortfolioModel[] = [
     link_code: "https://play.google.com/store/apps/details?id=com.org.pontoe",
     project_description: {
       "pt-BR":
-        "Aplicativo de compra de produtos com cashback em pontos, focado em proporcionar o acesso à educação com mais de 10 mil downloads.",
+        "Aplicativo de compra de produtos com cashback em pontos, focado em proporcionar o acesso à educação e com mais de 10 mil downloads.",
       "en-US":
-        "Application for purchasing products with cashback in points focused on providing access to education with more than 10 thousand downloads.",
+        "Application for purchasing products with cashback in points focused on providing access to education and with more than 10 thousand downloads.",
     },
     project_img: "pontoe",
     project_name: "PontoE",
