@@ -24,7 +24,7 @@ const PortfolioContent = ({ type, setType, personal, redirectTo, language, goTo,
         </section>
         <div className="project-options">
           <button onClick={() => setType('companies')}>
-            {language === 'en-US'? 'Created in companies' : 'Criado em empresas'}
+            {language === 'en-US'? 'Developed in companies' : 'Desenvolvido em empresas'}
           </button>
           <button onClick={() => setType('personal')}>
             {language === 'en-US'? 'Personal projects' : 'Projetos pessoais'}
