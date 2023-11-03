@@ -10,13 +10,13 @@ const Home: NextPage = () => {
 
  useEffect(()=>{
   if(typeof window !== "undefined") setTimeout(() => {
-    typeWriter('.author-paper')
+    // typeWriter('.author-paper', role[language].split(''))
   },1);
- }, [language]);
+ }, []);
 
  const role = {
-   "pt-BR": "Desenvolvedor",
-   "en-US": "Developer"
+   "pt-BR": "Desenvolvedor Full Stack",
+   "en-US": "Full Stack Developer"
  }
 
   return (
