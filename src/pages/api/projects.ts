@@ -211,6 +211,34 @@ const personalProjects: PortfolioModel[] = [
 ];
 
 const companieProjects: PortfolioModel[] = [
+  {
+    link_code: "https://play.google.com/store/apps/details?id=com.health4all&hl=pt_BR&gl=US",
+    project_description: {
+      "pt-BR":
+        `Health4All é a aplicação que ajuda a identificar os seus sintomas e cuidar da sua saúde através de uma tecnologia fidedigna e de confiança, tudo isso com um atendimento rápido e de qualidade.
+
+        Atendimento e triagem com IA
+        São mais de 50 sequências operacionais capazes de realizar rapidamente a triagem dos pacientes.`,
+      "en-US":
+        `Health4All is the application that helps identify your symptoms and take care of your health through reliable and trustworthy technology, all with fast and quality service.
+
+        AI-powered Assistance and Triage
+        There are over 50 operational sequences capable of quickly triaging patients`,
+    },
+    project_img: "health4all",
+    project_name: "Health4all",
+    tags: [
+      {
+        tag_name: "Flutter",
+      },
+      {
+        tag_name: "IA",
+      },
+        {
+        tag_name: "Golang",
+      },
+    ],
+  },
      {
     link_code: "https://play.google.com/store/apps/details?id=com.org.pontoe",
     project_description: {
